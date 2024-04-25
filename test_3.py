@@ -37,12 +37,12 @@ def main():
 
         img_o = cv2.imread(img_path)
 
-        img = img_o[:, :, ::-1].transpose(2, 0, 1).copy()  # BGR to RGB, to 3x416x416
+        img = img_o[:, :, ::-1].transpose(2, 0, 1).copy()
 
         start = time.time()
 
         img = torch.from_numpy(img).to(device)
-        input = img.float()  # uint8 to fp16/32
+        input = img.float()  
         input /= 255.0  # 0 - 255 to 0.0 - 1.0
         if input.ndimension() == 3:
             input = input.unsqueeze(0)
