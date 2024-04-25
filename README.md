@@ -5,7 +5,7 @@ opencv 4.6.0
 python 3.8
 pytorch 2.1.1
 
-**This project is written using pycharm, so the directory are using /**
+**This project is written using pycharm, so the directory are using / format**
 
 # The file explanation:
 ## Folder Data prechecking
