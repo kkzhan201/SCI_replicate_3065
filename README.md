@@ -15,7 +15,7 @@ RawtoRGB.py transfers raw format images into BGR format using rawpy, other files
 ## folder evaluation:
 two files are for loss extraction from training loss .txt file, and plot.
 
-## Root directory
+# Root directory(Please Read this!! This part demonstrates what I've done)
 - model.py containing the model details originated from the SCI author. For the reason of using 3 layers of 3x3 CNN, the SCI author conducted experiments regarding this topic in their paper, 3x3 is an optimal solution in performance and complexity.
 - mult_read_data.py contains the data reading method for training and testing.
 - finetune.py contains the fintune stratagy of SCI author, I did not conduct fintune in my training process.
@@ -32,7 +32,7 @@ two files are for loss extraction from training loss .txt file, and plot.
 
 ## Regarding the extra file I uploaded on moodle
 
-result.zip:
+### result.zip:
   - containing the original darkface_testset,
   - folder DarkFaceTest is the image selected for the face-detection test, models_vs_selected_img contains the selected darkface images and generated output from tested models.
   - weight758_MIT contains the test output of weight 758.
@@ -43,8 +43,18 @@ result.zip:
 txtfile_TrainV1.zip
 txtfile_TrainV3.zip
 - Within them there is a top10.txt file, it contains the final top 10 average value of weights, and at top of each training txt file there is recorded the model size.
+- I also attached the V2 traininglog.txt, which is the failed version that does not converge.
+
+### dataset folder
+contains the original LSRW dataset (Nikon), TestsetV1, raw format of TestsetV2 and trainset V1. Trainset V3 is too large
 
 - I also attached the Ultra-Light-Fast-Generic-Face-Detector-1MB.zip, or you can find their github link https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
 EnGAN https://github.com/VITA-Group/EnlightenGAN
 Retinex Net https://github.com/weichen582/RetinexNet
 Zero DCE https://github.com/Li-Chongyi/Zero-DCE
+## Run env
+- In which, EnGAN can be run on the same env as above mentioned with visdom  0.2.4 installed and referenced to this webpage https://blog.csdn.net/L_27N113E/article/details/130214102
+- Retinex Net Zero_DCE and Face-detector all need to be run on their own env.
+- The other models are all too large with size around 6-9G
+
+# If you need any further details or datasets or need my version of other models or any training details, please contact my email with sid included in my report.
